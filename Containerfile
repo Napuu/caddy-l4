@@ -6,4 +6,4 @@ RUN xcaddy build --with github.com/mholt/caddy-l4
 
 FROM scratch
 COPY --from=build /build/caddy /bin/caddy
-ENTRYPOINT ["/bin/caddy"]
+ENTRYPOINT ["/bin/caddy", "run"]
